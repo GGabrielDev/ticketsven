@@ -29,6 +29,19 @@ export const asyncActions = {
       return rejectWithValue(error.response.data);
     }
   }),
+  getTicketDatePairs: createAsyncThunk<
+    number[][],
+    undefined,
+    { state: RootState; rejectValue: ErrorType }
+  >("ticket/getDatePairs", async (_, { rejectWithValue, getState }) => {
+    try {
+      return (
+        await axios.get("/supervisor/dates", axiosConfig(getState().user.token))
+      ).data;
+    } catch (error: any) {
+      return rejectWithValue(error.response.data);
+    }
+  }),
   postTicketOperator: createAsyncThunk<
     string,
     Partial<TicketType>,

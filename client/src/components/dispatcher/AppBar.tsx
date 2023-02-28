@@ -55,12 +55,12 @@ function ResponsiveAppBar({
     dispatch(logout());
   };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTime(new Date().toLocaleTimeString());
-    }, 1000);
-    return () => clearInterval(interval);
-  }, []);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentTime(new Date().toLocaleTimeString());
+  //   }, 1000);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return html`
     <${AppBar}

@@ -95,7 +95,7 @@ function ResponsiveAppBar() {
             variant="h6"
             sx=${{ display: { xs: "none", sm: "flex" } }}
           >
-            Vista de Operador
+            Vista de Supervisor
           <//>
           <${Box} sx=${{ flexGrow: 0 }}>
             <${Tooltip} title="Open settings">

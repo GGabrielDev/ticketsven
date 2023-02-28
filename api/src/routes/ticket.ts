@@ -194,6 +194,7 @@ router.put(
   authRole("dispatcher"),
   async (req: RouteRequest, res: Response, next: NextFunction) => {
     try {
+      console.log(req.body);
       const { ticketId } = req.params;
       const {
         quadrantId,
